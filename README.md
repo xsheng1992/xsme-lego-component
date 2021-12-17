@@ -1,0 +1,2 @@
+# xsme-lego-component
+components
