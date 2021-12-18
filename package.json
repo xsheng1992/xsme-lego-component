@@ -7,6 +7,9 @@
   "types": "dist/src/index.d.ts",
   "author": "xsheng1992",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "Component",
     "UI",
