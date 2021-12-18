@@ -23,11 +23,18 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
+    "test:watch": "vue-cli-service test:unit --watch",
+    "test": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint --max-warnnings 5",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
   },
   "peerDependencies": {
     "vue": "^3.0.0"
@@ -57,6 +64,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^7.0.0",
+    "husky": "4",
+    "rgb-hex": "^4.0.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.60.2",
     "rollup-plugin-css-porter": "^1.0.2",
