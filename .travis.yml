@@ -1,3 +1,12 @@
 language: node_js
 node_js:
-  - node
+- node
+deploy:
+  provider: npm
+  email: a415441091@hotmail.com
+  skip_cleanup: true
+  api_key:
+    secure: UzfG85V7y0J3CevV/pCUHBoaTyHIZYvY3gQGoMCbxIukss/DSCkQ073XE3SmibYwu3EnBQIKsua6IRIsV8i9JMgpKO3cOGKq9CGCYCmwZQMQ8HlRh9/EmkFDDtkzVG2jEK76qiGa1IiQHlPjV1bPpo8wW4PTgdyAeAwe6uPZdLLSkVN/UFYIbvtS7dIBL3IlRgcokCp2eWRqfVNS965dyoy7YiQejl9dSfNGuE7PrnZPRZhsSctmF1RNlwT5hdBhVXyRFzzj7xjP7ZWvcwa5EGWuUwDWPC23DBkUAZ38BEoA1lm3t2sKRXuGroEPxqbdIfcfHNOvQaydOHabYzYapmGJPzJZIJOu/xkeTU2w0jfoYUMndHRyur+Vd4Zoo2bkOoPBZqn/wOPi26zDxIKCqkYiwWDMCX/1EVrXzcc56zyfYm/UkfgamawbOWLMAxSBt7wFWHVEnv8huElQ6xDGlwbvLeIsoe9YsLCuLysp6/M6ek+9/bVPm/AfrZ13mOwQCF1m+VSS3V8/TJOHD0tQdHttg4si7oLQ/sstIxmNi/r1wlI/iszstmf2nNAbnx0Pikpec0JHm9awkHVn+tmXlbZ4X9s9nkyEhlzP0o/0K9a+JtGA20Xe5fKTdJLovL+ijFeV8psZLgrg+7OdqzVdirQbN5qc9i5ptj4lp+EUT3o=
+  on:
+    tags: true
+  
